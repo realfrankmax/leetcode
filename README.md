@@ -19,5 +19,12 @@ int[][] iArray = list.toArray(new int[list.size()][2]);
 List<Integer> list = List.of(1,3,4);
 Integer[] arr = list.toArray(new Integer[list.size()]);
 int[] arr = list.stream().mapToInt(Integer::intValue).toArray();
-
+```
+### Sort
+```
+Arrays.sort(T[] a, Comparator<? super T> c) // the array must be object type, but not primitive 
+```
+### Reverse a string
+```
+new StringBuilder(s).reverse().toString();
 ```
