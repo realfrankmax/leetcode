@@ -21,24 +21,24 @@ public class CloneGraph {
         // which are used to create new ones.
         Queue<Node> q = new LinkedList<>();
         // Map to find if a node has been copied.
-        Map<Integer, Node> map = new HashMap<>();
+        Map<Node, Node> map = new HashMap<>();
         q.add(node);
         while (!q.isEmpty()) {
             Node curr = q.remove();
-            if (!map.containsKey(curr.val)) {
+            if (!map.containsKey(curr)) {
                 // Saved copied node to map
-                map.put(curr.val, new Node(curr.val));
+                map.put(curr, new Node(curr.val));
             }
             for (Node n : curr.neighbors) {
                 // A new node is found in current graph
-                if (!map.containsKey(n.val)) {
-                    map.put(n.val, new Node(n.val));
+                if (!map.containsKey(n)) {
+                    map.put(n, new Node(n.val));
                     q.add(n);
                 }
-                map.get(curr.val).neighbors.add(map.get(n.val));
+                map.get(curr).neighbors.add(map.get(n));
             }
         }
-        return map.get(node.val);
+        return map.get(node);
     }
 
     class Node {
