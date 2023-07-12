@@ -41,7 +41,7 @@ public class NumIslands {
             }
         }
     }
-
+    @SuppressWarnings(value = { "unused" })
     private void mark(char[][] grid, int r, int c) {
         if (r < 0 || r >= grid.length || c < 0 || c >= grid[0].length || grid[r][c] == '0') {
             return ;
