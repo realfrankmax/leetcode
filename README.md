@@ -28,3 +28,11 @@ Arrays.sort(T[] a, Comparator<? super T> c) // the array must be object type, bu
 ```
 new StringBuilder(s).reverse().toString();
 ```
+### Map: add if absent
+```
+Map<Integer, Integer> map = new HashMap<>();
+if (!map.containsKey(1)) {
+    map.put(1, 0);
+}
+map.computeIfAbsent(1, x -> 0); // Better
+```
