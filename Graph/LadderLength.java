@@ -13,24 +13,28 @@ public class LadderLength {
     public static void main(String[] args) {}
 
     public int ladderLength(String beginWord, String endWord, List<String> wordList) {
+        if (beginWord.equals(endWord)) {
+            return 0;
+        }
         Queue<String> q = new LinkedList<>();
         q.add(beginWord);
         int ladder = 1;
         Set<String> used = new HashSet<>();
         while (!q.isEmpty()) {
             int size = q.size();
+            ladder++;
             while (size-- != 0) {
                 String curr = q.remove();
-                if (curr.equals(endWord)) {
-                    return ladder;
-                }
                 for (String w : wordList) {
                     if (getDistance(w, curr) == 1 && used.add(w)) {
+                        // Check within current iteration.
+                        if (w.equals(endWord)) {
+                            return ladder;
+                        }
                         q.add(w);
                     }
                 }
             }
-            ladder++;
         }
         return 0;
     }
