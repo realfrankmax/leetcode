@@ -22,7 +22,8 @@ int[] arr = list.stream().mapToInt(Integer::intValue).toArray();
 ```
 ### Sort
 ```
-Arrays.sort(T[] a, Comparator<? super T> c) // the array must be object type, but not primitive 
+Arrays.sort(T[] a, Comparator<? super T> c) // To use comparator, the array must be object type, but not primitive 
+Arrays.sort(int[] a)
 ```
 ### Reverse a string
 ```
@@ -36,3 +37,16 @@ if (!map.containsKey(1)) {
 }
 map.computeIfAbsent(1, x -> 0); // Better
 ```
+### PriorityQueue
+- O(log(n)) time for the enqueing and dequeing methods (**offer, poll**).
+- Linear time for the remove(Object) and contains(Object) methods.
+- Constant time for the retrieval methods (**peek**, element, and size).
+
+With comparator
+```
+Book b = new Book(12);
+b.getCost(); // return 12
+PriorityQueue<T> pq = new PriorityQueue<>((book1, book2) -> Integer.compare(book1.getCost(), book2.getCost())); // Sort books in cost increasing order
+```
+
+
