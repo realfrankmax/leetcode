@@ -1,7 +1,8 @@
-# leetcode
-**169** problems from [techinterviewhandbook](https://www.techinterviewhandbook.org/grind75?weeks=4&hours=40&mode=all&order=topics&grouping=topics#)
+# Leetcode
+- **169** problems from [techinterviewhandbook](https://www.techinterviewhandbook.org/grind75?weeks=4&hours=40&mode=all&order=topics&grouping=topics#)
+- Plus some interesting problems
 
-## Note
+## Notes
 ### Initialization
 ```
 List<Integer> list = List.of(1, 2, 3); // Immutable; Non-null supported
@@ -48,5 +49,3 @@ Book b = new Book(12);
 b.getCost(); // return 12
 PriorityQueue<T> pq = new PriorityQueue<>((book1, book2) -> Integer.compare(book1.getCost(), book2.getCost())); // Sort books in cost increasing order
 ```
-
-
