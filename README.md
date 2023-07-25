@@ -66,6 +66,8 @@ Math.log10(100);    // Output: 2.0
 "ABC".startsWith("A");            // Output: true
 "ABC".endsWith("BC");             // Output: true
 String[] a = ",,,".split(",");    // a.length == 0 (Note: trailing empty strings will be discarded)
-String[] a = ",,,".split(",", -1);// a.length == 4
 String[] a = "a,,b,".split(",");  // a.length == 3 with trailing empty string discarded.
+String[] a = ",a,,b,".split(","); // a.length == 4 (Note: An empty leading substring is added)
+String[] a = ",,,".split(",", -1);// a.length == 4
+
 ```
