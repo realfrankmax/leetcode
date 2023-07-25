@@ -49,3 +49,37 @@ Book b = new Book(12);
 b.getCost(); // return 12
 PriorityQueue<T> pq = new PriorityQueue<>((book1, book2) -> Integer.compare(book1.getCost(), book2.getCost())); // Sort books in cost increasing order
 ```
+### Math
+```
+Math.ceil(3.4);
+// Output: 4.0
+Math.floor(3.4);
+// Output: 3.0
+Math.pow(2,3);
+// Output: 8.0
+Math.log10(100);
+// Output: 2.0
+```
+### String
+```
+"ABc".substring(1, 2);
+// Output: "B"
+"ABc".contains("B");
+// Output: true
+"ABc".toLowerCase();
+// Output: "abc"
+"ABc".toUpperCase();
+// Output: "ABC"
+" ABC ".trim();
+// Output: "ABC"
+"ABC".startsWith("A");
+// Output: true
+"ABC".endsWith("BC");
+// Output: true
+String[] a = ",,,".split(",");
+// a.length == 0 (Note: trailing empty strings will be discarded)
+String[] a = ",,,".split(",", -1);
+// a.length == 4
+String[] a = "a,,b,".split(",");
+// a.length == 3 with trailing empty string discarded.
+```
