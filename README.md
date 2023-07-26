@@ -69,5 +69,9 @@ String[] a = ",,,".split(",");    // a.length == 0 (Note: trailing empty strings
 String[] a = "a,,b,".split(",");  // a.length == 3 with trailing empty string discarded.
 String[] a = ",a,,b,".split(","); // a.length == 4 (Note: An empty leading substring is added)
 String[] a = ",,,".split(",", -1);// a.length == 4
-
+```
+### Integer
+```
+Integer.toString(123).toCharArray();               // Break down an integer to digits
+Integer.parseInt(new String(new char[]{'1','2'}))  // Create an integer from digits
 ```
