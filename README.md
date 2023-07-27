@@ -75,3 +75,11 @@ String[] a = ",,,".split(",", -1);// a.length == 4
 Integer.toString(123).toCharArray();               // Break down an integer to digits
 Integer.parseInt(new String(new char[]{'1','2'}))  // Create an integer from digits
 ```
+### List
+```
+List<Integer> list = new ArrayList<>();
+list.add(null);  // This works
+list.add(1, 10); // At 10 at index 1
+list.remove(1);  // Remove item at index 1, but not working if inited with List.of()
+list.set(1, 10); // Set item to 10 at index 1
+```
