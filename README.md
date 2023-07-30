@@ -100,3 +100,14 @@ Set<String> set = new HashSet<>(Arrays.asList("a", "b", "c"));
 Set<Integer> set = new HashSet<>();
 set.iterator().next(); // It will return an item in the list (or exception if empty).
 ```
+### Static, Final
+- "static" is used to define a class variable whose value is shared among all objects of the class.
+  - Example: `ClassName.VARIABLE_NAME`
+- Without it, it is called an instance variable which keeps a copy of data for a single object.
+  - Example: `this.variableName`
+- "final"
+  - When using like "static final", it will give a constant for the class.
+    - It has to be initialized explicitly (during declaration usually)
+    - Example: `private final static int b = 2;`
+  - When using alone, it will give a constant for the instance.
+    - It has to be initialized either during declaration or in constructor.
