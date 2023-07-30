@@ -3,10 +3,15 @@
 - Plus some interesting problems
 
 ## Notes
-### Sort
+### Arrays
 ```
-Arrays.sort(T[] a, Comparator<? super T> c) // To use comparator, the array must be object type, but not primitive 
-Arrays.sort(int[] a)                        // In ascending numerical order
+Arrays.sort(T[] a, Comparator<? super T> c) // To use comparator, the array must be Object type, but not primitive 
+Arrays.sort(int[] a)                        // In ascending numerical order, and can only be.
+Arrays.stream(a).boxed()
+    .sorted(Collections.reverseOrder())
+    .mapToInt(Integer::intValue).toArray()  // Reverse int[] a
+
+Arrays.toString(new int[]{1,2,3});          // Output: "[1, 2, 3]"
 ```
 ### Map
 ```
@@ -75,7 +80,7 @@ List<Integer> newList = new ArrayList<>(list);
 
 List<Integer> list = new ArrayList<>();
 list.add(null);  // This works
-list.add(1, 10); // At 10 at index 1
+list.add(1, 10); // Add 10 at index 1
 list.remove(1);  // Remove item at index 1, but not working if inited with List.of()
 list.set(1, 10); // Set item to 10 at index 1
 
