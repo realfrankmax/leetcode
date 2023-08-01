@@ -2,7 +2,50 @@
 - **169** problems from [techinterviewhandbook](https://www.techinterviewhandbook.org/grind75?weeks=4&hours=40&mode=all&order=topics&grouping=topics#)
 - Plus some interesting problems
 
-## Notes
+## Methods
+### Math
+```
+Math.ceil(3.4);     // Output: 4.0
+Math.floor(3.4);    // Output: 3.0
+Math.pow(2,3);      // Output: 8.0
+Math.log10(100);    // Output: 2.0
+```
+### Character
+```
+Character.isDigit('1');
+Character.isLetter('a');
+Character.isLetterOrDigit('a');
+```
+### String
+```
+// Basics
+"ABc".substring(1, 2);            // Output: "B" 
+"ABc".contains("B");              // Output: true
+"ABc".toLowerCase();              // Output: "abc"
+"ABc".toUpperCase();              // Output: "ABC"
+" ABC ".trim();                   // Output: "ABC"
+"ABC".startsWith("A");            // Output: true
+"ABC".endsWith("BC");             // Output: true
+String[] a = ",,,".split(",");    // a.length == 0 (Note: trailing empty strings will be discarded)
+String[] a = "a,,b,".split(",");  // a.length == 3 with trailing empty string discarded.
+String[] a = ",a,,b,".split(","); // a.length == 4 (Note: An empty leading substring is added)
+String[] a = ",,,".split(",", -1);// a.length == 4
+
+// Comparison
+String x = "abc";
+String y = x;
+x == y;     // Output: true because "==" checks if two variables point to same memory location.
+x.equals(y) // Output: true because "equals" checks the content of two objects.
+
+// Reverse
+new StringBuilder(s).reverse().toString();
+```
+### Integer
+```
+Integer.toString(123).toCharArray();               // Break down an integer to digits
+Integer.parseInt(new String(new char[]{'1','2'}))  // Create an integer from digits
+```
+## Data Structures
 ### Arrays
 ```
 Arrays.sort(T[] a, Comparator<? super T> c) // To use comparator, the array must be Object type, but not primitive 
@@ -35,42 +78,6 @@ Book b = new Book(12);
 b.getCost(); // return 12
 PriorityQueue<T> pq = new PriorityQueue<>((book1, book2) -> Integer.compare(book1.getCost(), book2.getCost())); // Sort books in cost increasing order
 ```
-### Math
-```
-Math.ceil(3.4);     // Output: 4.0
-Math.floor(3.4);    // Output: 3.0
-Math.pow(2,3);      // Output: 8.0
-Math.log10(100);    // Output: 2.0
-```
-### String
-```
-// Basics
-"ABc".substring(1, 2);            // Output: "B" 
-"ABc".contains("B");              // Output: true
-"ABc".toLowerCase();              // Output: "abc"
-"ABc".toUpperCase();              // Output: "ABC"
-" ABC ".trim();                   // Output: "ABC"
-"ABC".startsWith("A");            // Output: true
-"ABC".endsWith("BC");             // Output: true
-String[] a = ",,,".split(",");    // a.length == 0 (Note: trailing empty strings will be discarded)
-String[] a = "a,,b,".split(",");  // a.length == 3 with trailing empty string discarded.
-String[] a = ",a,,b,".split(","); // a.length == 4 (Note: An empty leading substring is added)
-String[] a = ",,,".split(",", -1);// a.length == 4
-
-// Comparison
-String x = "abc";
-String y = x;
-x == y;     // Output: true because "==" checks if two variables point to same memory location.
-x.equals(y) // Output: true because "equals" checks the content of two objects.
-
-// Reverse
-new StringBuilder(s).reverse().toString();
-```
-### Integer
-```
-Integer.toString(123).toCharArray();               // Break down an integer to digits
-Integer.parseInt(new String(new char[]{'1','2'}))  // Create an integer from digits
-```
 ### List
 ```
 // Initialization
@@ -100,6 +107,7 @@ Set<String> set = new HashSet<>(Arrays.asList("a", "b", "c"));
 Set<Integer> set = new HashSet<>();
 set.iterator().next(); // It will return an item in the list (or exception if empty).
 ```
+## Concepts
 ### Static, Final
 - "static" is used to define a class variable whose value is shared among all objects of the class.
   - Example: `ClassName.VARIABLE_NAME`
