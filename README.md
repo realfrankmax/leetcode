@@ -15,6 +15,7 @@ Math.log10(100);    // Output: 2.0
 Character.isDigit('1');
 Character.isLetter('a');
 Character.isLetterOrDigit('a');
+Character.getNumericValue('1'); // Return int: 1
 ```
 ### String
 ```

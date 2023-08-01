@@ -1,7 +1,7 @@
 package HighFrequency;
 
 /**
- * @leetcode: Valid Word Abbreviation
+ * @leetcode: 408. Valid Word Abbreviation
  */
 public class ValidWordAbbreviation {
     public static void main(String[] args) {}
@@ -19,8 +19,12 @@ public class ValidWordAbbreviation {
                 // Count shouldn't start with 0
                 if(a > '0' && a <= '9'){
                     int count = 0;
-                    while(j < abbr.length() && abbr.charAt(j) >= '0' && abbr.charAt(j) <= '9'){
-                        count = 10*count + abbr.charAt(j)-'0';
+                    // while(j < abbr.length() && abbr.charAt(j) >= '0' && abbr.charAt(j) <= '9'){
+                    //     count = 10*count + abbr.charAt(j)-'0';
+                    //     j++;
+                    // }
+                    while (j < abbr.length() && Character.isDigit(abbr.charAt(j))) {
+                        count = 10*count + Character.getNumericValue(abbr.charAt(j));
                         j++;
                     }
                     i += count;
