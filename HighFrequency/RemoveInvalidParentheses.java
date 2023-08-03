@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @leetcode: Remove Invalid Parentheses
+ * @leetcode: 301. Remove Invalid Parentheses
  */
 public class RemoveInvalidParentheses {
     public static void main(String[] args) {}
@@ -21,17 +21,22 @@ public class RemoveInvalidParentheses {
     // When (() has been checked, there could be more ),
     // When ()) has been checked, one ) MUST be removed.
     private void remove(String s, int start, int removeStart, char left, char right) {
-        for (int i = start, count = 0; i < s.length(); i++) {
+        int diff = 0;
+        int i = start;
+        while(i < s.length()) {
             char c = s.charAt(i);
             if (c == left) {
-                count++;
+                diff++;
             } else if (c == right) {
-                count--;
+                diff--;
             }
-            if (count >= 0) {
-                continue;
+            if (diff < 0) {
+                break;
             }
-            // count < 0; Have to remove one char: right
+            i++;
+        }
+        if (diff < 0) {
+            // Have to remove one char: right
             for (int j = removeStart; j <= i; j++) {
                 // Need to remove one right char from every right char group. Like ), or ))
                 if (s.charAt(j) == right && (j == removeStart || s.charAt(j-1) != right)) {
@@ -39,14 +44,17 @@ public class RemoveInvalidParentheses {
                 }
             }
             // Once a unmatched char right is removed, we could stop
-            // because the rest of the string will be checked in recursion above.
-            return ;
-        }
-        String reversed = new StringBuilder(s).reverse().toString();
-        if (left == '(') {
-            remove(reversed, 0, 0, ')', '(');
+            // because the rest of the string will be checked in recursion above. 
         } else {
-            this.res.add(reversed);
+            String reversed = new StringBuilder(s).reverse().toString();
+            if (left == '(') {
+                // It means left count > right count
+                // Now it is to check left
+                remove(reversed, 0, 0, ')', '(');
+            } else {
+                // Both have been checked.
+                this.res.add(reversed);
+            }
         }
     }
 }
