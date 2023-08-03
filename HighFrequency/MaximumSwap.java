@@ -1,7 +1,7 @@
 package HighFrequency;
 
 /**
- * @leetcode: Maximum Swap
+ * @leetcode: 670. Maximum Swap
  */
 public class MaximumSwap {
     public static void main(String[] args) {}

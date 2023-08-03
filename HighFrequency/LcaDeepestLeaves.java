@@ -1,11 +1,12 @@
 package HighFrequency;
 
 /**
- * @leetcode: Lowest Common Ancestor of Deepest Leaves
+ * @leetcode: 1123. Lowest Common Ancestor of Deepest Leaves
  */
 public class LcaDeepestLeaves {
     public static void main(String[] args) {}
 
+    // Time O(n^2) but if saving a node-height map, it could be O(n)
     public TreeNode lcaDeepestLeaves(TreeNode root) {
         if (root == null) {
             return root;
@@ -60,9 +61,10 @@ public class LcaDeepestLeaves {
                     }
                     currentLayer = upLayer;
                 }
-                for (TreeNode n : currentLayer) {
-                    return n;
-                }
+                return currentLayer.iterator().next();
+                // for (TreeNode n : currentLayer) {
+                //     return n;
+                // }
             }
         }
         return null;

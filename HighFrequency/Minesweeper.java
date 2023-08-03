@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Queue;
 
 /**
- * @leetcode: Minesweeper
+ * @leetcode: 529. Minesweeper
  */
 public class Minesweeper {
     public static void main(String[] args) {}

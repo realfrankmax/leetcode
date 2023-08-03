@@ -1,7 +1,7 @@
 package HighFrequency;
 
 /**
- * @leetcode: Custom Sort String
+ * @leetcode: 791. Custom Sort String
  */
 public class CustomSortString {
     public static void main(String[] args) {}
@@ -22,6 +22,8 @@ public class CustomSortString {
     //     }
     //     return sb.toString();
     // }
+
+    // Time O(m*n)
     public String customSortString(String order, String s) {
         int[] count = new int[26];
         for (char c : s.toCharArray()) {

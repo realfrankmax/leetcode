@@ -1,7 +1,7 @@
 package HighFrequency;
 
 /**
- * @leetcode: Minimum Add to Make Parentheses Valid
+ * @leetcode: 921. Minimum Add to Make Parentheses Valid
  */
 public class MinAddToMakeValid {
     public static void main(String[] args) {}
