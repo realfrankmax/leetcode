@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @leetcode: Palindrome Pairs
+ * @leetcode: 336. Palindrome Pairs
  */
 public class PalindromePairs {
     public static void main(String[] args) {}
@@ -17,10 +17,12 @@ public class PalindromePairs {
     // The palinedrome part could be first half, which means the second str will prepend
     // The palinedrome part could be second half, which means the second str will append.
     // The only exception is that if first half is "", and second half is abcd,
-    // We will look for bcda as second str.
-    // Same for when the bcda as first str.
+    // We will look for dcba as second str.
+    // Same for when the dcba as first str.
     // So only check one situtaion in such case when empty str is used in sub palinedrome.
     // s + lls
+
+    // Time O(N*len^2)
     public List<List<Integer>> palindromePairs(String[] words) {
         Map<String, Integer> idx = new HashMap<>();
         for (int i = 0; i < words.length; i++) {

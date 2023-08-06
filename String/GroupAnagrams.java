@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @leetcode: Group Anagrams
+ * @leetcode: 49. Group Anagrams
  */
 public class GroupAnagrams {
     public static void main(String[] args) {}
@@ -42,36 +42,61 @@ public class GroupAnagrams {
     }
 
     private void merge(char[] c, int start, int mid, int end) {
-        // Note: Sort sub-array from start to end
-        int len1 = mid-start+1;
-        int len2 = end-mid;
-        char[] sub1 = new char[len1];
-        char[] sub2 = new char[len2];
-        for (int i = start; i <= mid; i++) {
-            sub1[i-start] = c[i];
-        }
-        for (int i = mid+1; i <= end; i++) {
-            sub2[i-mid-1] = c[i];
-        }
-        int idx = start;
-        int i1 = 0;
-        int i2 = 0;
-        // Merge into char[] c from start to end
-        while (idx <= end) {
-            if (i1 == len1) {
-                c[idx] = sub2[i2];
-                i2++;
-            } else if (i2 == len2) {
-                c[idx] = sub1[i1];
-                i1++;
-            } else if (sub1[i1] < sub2[i2]) {
-                c[idx] = sub1[i1];
-                i1++;
+        char[] sub = new char[end-start+1];
+        int idx = 0;
+        int i = start;
+        int j = mid+1;
+        while (idx <= sub.length) {
+            if (i > mid) {
+                sub[idx] = c[j];
+                j++;
+            } else if (j > end) {
+                sub[idx] = c[i];
+                i++;
             } else {
-                c[idx] = sub2[i2];
-                i2++;
+                if (c[i] < c[j]) {
+                    sub[idx] = c[i];
+                    i++;
+                } else {
+                    sub[idx] = c[j];
+                    j++;
+                }
             }
             idx++;
         }
+        for (int m = start; m <= end; m++) {
+            c[m] = sub[m-start];
+        }
+        // // Note: Sort sub-array from start to end
+        // int len1 = mid-start+1;
+        // int len2 = end-mid;
+        // char[] sub1 = new char[len1];
+        // char[] sub2 = new char[len2];
+        // for (int i = start; i <= mid; i++) {
+        //     sub1[i-start] = c[i];
+        // }
+        // for (int i = mid+1; i <= end; i++) {
+        //     sub2[i-mid-1] = c[i];
+        // }
+        // int idx = start;
+        // int i1 = 0;
+        // int i2 = 0;
+        // // Merge into char[] c from start to end
+        // while (idx <= end) {
+        //     if (i1 == len1) {
+        //         c[idx] = sub2[i2];
+        //         i2++;
+        //     } else if (i2 == len2) {
+        //         c[idx] = sub1[i1];
+        //         i1++;
+        //     } else if (sub1[i1] < sub2[i2]) {
+        //         c[idx] = sub1[i1];
+        //         i1++;
+        //     } else {
+        //         c[idx] = sub2[i2];
+        //         i2++;
+        //     }
+        //     idx++;
+        // }
     }
 }

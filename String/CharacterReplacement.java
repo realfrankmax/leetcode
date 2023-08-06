@@ -1,7 +1,7 @@
 package String;
 
 /**
- * @leetcode: Longest Repeating Character Replacement
+ * @leetcode: 424. Longest Repeating Character Replacement
  */
 public class CharacterReplacement {
     public static void main(String[] args) {}
@@ -18,7 +18,9 @@ public class CharacterReplacement {
             // Even though start moves which makes the maxCount not for sub array [start,i]
             // It is still valid because we only record max len.
             maxCount = Math.max(maxCount, count[curr-'A']);
+            // Key Note: 
             // As long as there is no new maxCount, the start pointer needs to be moved.
+            // Thus res will not increase.
             if (i-start+1 > maxCount+k) {
                 count[s.charAt(start)-'A']--;
                 start++;

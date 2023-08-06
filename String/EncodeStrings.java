@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @leetcode: Encode and Decode Strings
+ * @leetcode: 271. Encode and Decode Strings
  */
 public class EncodeStrings {
     public static void main(String[] args) {}
@@ -30,7 +30,7 @@ public class EncodeStrings {
                 i = i+len;
                 len = 0;
             } else {
-                len = len * 10 + s.charAt(i) - '0';
+                len = len * 10 + Character.getNumericValue(s.charAt(i));
             }
         }
         return res;

@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @leetcode: Longest Substring Without Repeating Characters
+ * @leetcode: 3. Longest Substring Without Repeating Characters
  */
 public class LengthOfLongestSubstring {
     public static void main(String[] args) {}

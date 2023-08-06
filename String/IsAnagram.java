@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @leetcode: Valid Anagram
+ * @leetcode: 242. Valid Anagram
  */
 public class IsAnagram {
     public static void main(String[] args) {}

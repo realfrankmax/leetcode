@@ -1,7 +1,7 @@
 package String;
 
 /**
- * @leetcode: Longest Common Prefix
+ * @leetcode: 14. Longest Common Prefix
  */
 public class LongestCommonPrefix {
     public static void main(String[] args) {}
