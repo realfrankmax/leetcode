@@ -1,7 +1,7 @@
 package Matrix;
 
 /**
- * @leetcode: Sudoku Solver
+ * @leetcode: 37. Sudoku Solver
  */
 public class SolveSudoku {
     public static void main(String[] args) {}

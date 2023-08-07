@@ -3,7 +3,7 @@ package Math;
 import java.util.Random;
 
 /**
- * @leetcode: Random Pick with Weight
+ * @leetcode: 528. Random Pick with Weight
  */
 public class PickIndex {
     public static void main(String[] args) {}

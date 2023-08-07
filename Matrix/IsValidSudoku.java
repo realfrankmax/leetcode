@@ -1,7 +1,7 @@
 package Matrix;
 
 /**
- * @leetcode: Valid Sudoku
+ * @leetcode: 36. Valid Sudoku
  */
 public class IsValidSudoku {
     public static void main(String[] args) {}

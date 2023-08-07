@@ -1,7 +1,7 @@
 package Matrix;
 
 /**
- * @leetcode: Rotate Image
+ * @leetcode: 48. Rotate Image
  */
 public class Rotate {
     public static void main(String[] args) {}

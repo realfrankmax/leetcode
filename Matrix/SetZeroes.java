@@ -1,7 +1,7 @@
 package Matrix;
 
 /**
- * @leetcode: Set Matrix Zeroes
+ * @leetcode: 73. Set Matrix Zeroes
  */
 public class SetZeroes {
     public static void main(String[] args) {}
