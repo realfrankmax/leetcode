@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * @leetcode: Rotting Oranges
+ * @leetcode: 994. Rotting Oranges
  */
 public class OrangesRotting {
     public static void main(String[] args) {}

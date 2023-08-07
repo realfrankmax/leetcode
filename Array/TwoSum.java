@@ -3,7 +3,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @leetcode: Two Sum
+ * @leetcode: 1. Two Sum
  */
 public class TwoSum {
     public static void main(String[] args) {}

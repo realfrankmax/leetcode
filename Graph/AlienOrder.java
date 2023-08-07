@@ -8,7 +8,7 @@ import java.util.Queue;
 import java.util.Set;
 
 /**
- * @leetcode: Alien Dictionary
+ * @leetcode: 269. Alien Dictionary
  */
 public class AlienOrder {
     public static void main(String[] args) {}

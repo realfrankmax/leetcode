@@ -1,9 +1,9 @@
-package BinarySearch;
+package DynamicProgramming;
 
 import java.util.Arrays;
 
 /**
- * @leetcode: Maximum Profit in Job Scheduling
+ * @leetcode: 1235. Maximum Profit in Job Scheduling
  */
 public class JobScheduling {
     public static void main(String[] args) {}

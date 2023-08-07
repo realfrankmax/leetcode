@@ -1,7 +1,7 @@
 package BinarySearch;
 
 /**
- * @leetcode: First Bad Version
+ * @leetcode: 278. First Bad Version
  */
 public class FirstBadVersion {
     public static void main(String[] args) {}

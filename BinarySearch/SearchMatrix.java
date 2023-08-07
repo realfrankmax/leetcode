@@ -1,7 +1,7 @@
 package BinarySearch;
 
 /**
- * @leetcode: Search a 2D Matrix
+ * @leetcode: 74. Search a 2D Matrix
  */
 public class SearchMatrix {
     public static void main(String[] args) {}

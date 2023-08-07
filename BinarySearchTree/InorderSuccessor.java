@@ -1,7 +1,7 @@
 package BinarySearchTree;
 
 /**
- * @leetcode: Inorder Successor in BST
+ * @leetcode: 285. Inorder Successor in BST
  */
 public class InorderSuccessor {
     public static void main(String[] args) {}

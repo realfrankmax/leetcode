@@ -4,7 +4,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 /**
- * @leetcode: Validate Binary Search Tree
+ * @leetcode: 98. Validate Binary Search Tree
  */
 public class IsValidBST {
     public static void main(String[] args) {}

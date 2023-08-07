@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * @leetcode: Number of Islands
+ * @leetcode: 200. Number of Islands
  */
 public class NumIslands {
     public static void main(String[] args) {}

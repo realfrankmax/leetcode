@@ -1,7 +1,7 @@
 package BinarySearch;
 
 /**
- * @leetcode: Median of Two Sorted Arrays
+ * @leetcode: 4. Median of Two Sorted Arrays
  */
 public class FindMedianSortedArrays {
     public static void main(String[] args) {}

@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * @leetcode: Shortest Path to Get Food
+ * @leetcode: 1730. Shortest Path to Get Food
  */
 public class GetFood {
     public static void main(String[] args) {}

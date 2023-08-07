@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * @leetcode: Minimum Knight Moves
+ * @leetcode: 1197. Minimum Knight Moves
  */
 public class MinKnightMoves {
     public static void main(String[] args) {}

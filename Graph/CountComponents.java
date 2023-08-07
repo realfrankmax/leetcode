@@ -3,7 +3,7 @@ package Graph;
 import java.util.Arrays;
 
 /**
- * @leetcode: Number of Connected Components in an Undirected Graph
+ * @leetcode: 323. Number of Connected Components in an Undirected Graph
  */
 public class CountComponents {
     public static void main(String[] args) {}

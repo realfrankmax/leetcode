@@ -8,7 +8,7 @@ import java.util.Queue;
 import java.util.Set;
 
 /**
- * @leetcode: Course Schedule
+ * @leetcode: 207. Course Schedule
  */
 public class CanFinish {
     public static void main(String[] args) {}

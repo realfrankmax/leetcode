@@ -3,7 +3,7 @@ package Graph;
 import java.util.Arrays;
 
 /**
- * @leetcode: Graph Valid Tree
+ * @leetcode: 261. Graph Valid Tree
  */
 public class ValidTree {
     public static void main(String[] args) {}

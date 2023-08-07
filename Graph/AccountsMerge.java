@@ -11,7 +11,7 @@ import java.util.Queue;
 import java.util.Set;
 
 /**
- * @leetcode: Accounts Merge
+ * @leetcode: 721. Accounts Merge
  */
 public class AccountsMerge {
     public static void main(String[] args) {}

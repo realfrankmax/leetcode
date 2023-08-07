@@ -1,7 +1,7 @@
 package BinarySearch;
 
 /**
- * @leetcode: Binary Search
+ * @leetcode: 704. Binary Search
  */
 public class BinarySearch {
     public static void main(String[] args) {}

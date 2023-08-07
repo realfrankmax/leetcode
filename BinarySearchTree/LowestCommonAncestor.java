@@ -1,7 +1,7 @@
 package BinarySearchTree;
 
 /**
- * @leetcode: Lowest Common Ancestor of a Binary Search Tree
+ * @leetcode: 235. Lowest Common Ancestor of a Binary Search Tree
  */
 public class LowestCommonAncestor {
     public static void main(String[] args) {}
