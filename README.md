@@ -2,6 +2,19 @@
 - **169** problems from [techinterviewhandbook](https://www.techinterviewhandbook.org/grind75?weeks=4&hours=40&mode=all&order=topics&grouping=topics#)
 - Plus some interesting problems
 
+## Validation pre-coding
+- If the input is String type, what is the character set?
+  - If the character set is lower case english letter, then an array of length 26 could be enough. 
+  - If lower case letter is the same as upper case one.
+- If the input has duplicate values?
+  - Tree nodes with same value
+  - Array elements with same value
+- If input has positive-only values? Or what is the range?
+  - It could affect how to choose the initial value if input has a negative value.
+- If values in the dictionary could be reused?
+- If the input (array/tree) could be modified?
+- If the input (array) is sorted?
+- If there are time/space complexity requirements
 ## Methods
 ### Math
 ```
@@ -57,6 +70,31 @@ Arrays.stream(a).boxed()
 
 Arrays.toString(new int[]{1,2,3});          // Output: "[1, 2, 3]"
 ```
+### StringBuilder
+```
+// Returns StringBuilder which supports method chaining
+append();
+reverse(); 
+deleteCharAt(int index);
+
+charAt(int index);              // Returns char
+setCharAt(int index, char ch);  // Returns void                    
+
+// Returns String
+substring(int start);
+substring(int start, int end);
+toString();
+```
+### Deque
+```
+// Methods to throw exception if fails
+addFirst(e);
+addLast(e);
+removeFirst();
+removeLast();
+getFirst();
+getLast();
+```
 ### Map
 ```
 // Initialization
@@ -67,17 +105,12 @@ if (!map.containsKey(1)) {
     map.put(1, 0);
 }
 map.computeIfAbsent(1, x -> 0); // Better
-```
-### PriorityQueue
-- O(log(n)) time for the enqueing and dequeing methods (**offer, poll**).
-- Linear time for the remove(Object) and contains(Object) methods.
-- Constant time for the retrieval methods (**peek**, element, and size).
 
-With comparator
-```
-Book b = new Book(12);
-b.getCost(); // return 12
-PriorityQueue<T> pq = new PriorityQueue<>((book1, book2) -> Integer.compare(book1.getCost(), book2.getCost())); // Sort books in cost increasing order
+map.entrySet();                 // Returns: Set<Map.Entry<K, V>>
+map.keySet();                   // Returns: Set<K>
+map.values();                   // Returns: Collections<V>
+
+map.remove(Object key);         // Remove the mapping for a key
 ```
 ### List
 ```
@@ -108,6 +141,33 @@ Set<String> set = new HashSet<>(Arrays.asList("a", "b", "c"));
 Set<Integer> set = new HashSet<>();
 set.iterator().next(); // It will return an item in the list (or exception if empty).
 ```
+### TreeSet
+This implementation provides guaranteed log(n) time cost for the basic operations (add, remove and contains).
+```
+TreeSet<Integer> ts = new TreeSet<>();
+ts.ceiling(1);          // Returns the least element in this set greater than or equal to the given element, or null if there is no such element.
+ts.floor(1);            // Returns the greatest element in this set less than or equal to the given element, or null if there is no such element.
+```
+### Queue
+```
+// Methods to throw exception if fails
+add()
+remove()
+element()
+```
+From javadoc:
+Queue implementations generally do not allow insertion of null elements, although some implementations, such as LinkedList, do not prohibit insertion of null. Even in the implementations that permit it, null should not be inserted into a Queue, as null is also used as a special return value by the poll method to indicate that the queue contains no elements.
+### PriorityQueue
+- O(log(n)) time for the enqueing and dequeing methods (**offer, poll**).
+- Linear time for the remove(Object) and contains(Object) methods.
+- Constant time for the retrieval methods (**peek**, element, and size).
+
+With comparator
+```
+Book b = new Book(12);
+b.getCost(); // return 12
+PriorityQueue<T> pq = new PriorityQueue<>((book1, book2) -> Integer.compare(book1.getCost(), book2.getCost())); // Sort books in cost increasing order
+```
 ## Concepts
 ### Static, Final
 - "static" is used to define a class variable whose value is shared among all objects of the class.
@@ -120,3 +180,5 @@ set.iterator().next(); // It will return an item in the list (or exception if em
     - Example: `private final static int b = 2;`
   - When using alone, it will give a constant for the instance.
     - It has to be initialized either during declaration or in constructor.
+### Why to use Deque over Stack?
+Stack is a subclass of Vector which is synchronized which means it has locks involved on operations which cause overhead. If a thread-safe implementation is not needed, then we could use Deque which is faster. Array deques are not thread-safe; in the absence of external synchronization, they do not support concurrent access by multiple threads.
