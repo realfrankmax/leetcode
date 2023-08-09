@@ -15,6 +15,7 @@
 - If the input (array/tree) could be modified?
 - If the input (array) is sorted?
 - If there are time/space complexity requirements
+- What are return values on special cases?
 ## Methods
 ### Math
 ```
