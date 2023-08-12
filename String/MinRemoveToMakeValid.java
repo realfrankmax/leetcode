@@ -1,10 +1,10 @@
-package HighFrequency;
+package String;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
 
 /**
- * @leetcode: Minimum Remove to Make Valid Parentheses
+ * @leetcode: 1249. Minimum Remove to Make Valid Parentheses
  */
 public class MinRemoveToMakeValid {
     public static void main(String[] args) {}

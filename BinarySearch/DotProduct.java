@@ -1,10 +1,10 @@
-package HighFrequency;
+package BinarySearch;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @leetcode: Dot Product of Two Sparse Vectors
+ * @leetcode: 1570. Dot Product of Two Sparse Vectors
  */
 public class DotProduct {
     public static void main(String[] args) {}

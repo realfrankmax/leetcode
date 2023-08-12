@@ -1,11 +1,11 @@
-package HighFrequency;
+package Array;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 /**
- * @leetcode: Buildings With an Ocean View
+ * @leetcode: 1762. Buildings With an Ocean View
  */
 public class FindBuildings {
     public static void main(String[] args) {}

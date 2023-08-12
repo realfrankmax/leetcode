@@ -1,9 +1,9 @@
-package HighFrequency;
+package Recursion;
 
 import java.util.List;
 
 /**
- * @leetcode: Nested List Weight Sum
+ * @leetcode: 339. Nested List Weight Sum
  */
 public class DepthSum {
     public static void main(String[] args) {}

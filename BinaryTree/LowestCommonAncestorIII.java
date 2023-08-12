@@ -1,12 +1,12 @@
-package HighFrequency;
+package BinaryTree;
 
 import java.util.HashSet;
 import java.util.Set;
 
 /**
- * @leetcode: Lowest Common Ancestor of a Binary Tree III
+ * @leetcode: 1650. Lowest Common Ancestor of a Binary Tree III
  */
-public class LowestCommonAncestor {
+public class LowestCommonAncestorIII {
     public static void main(String[] args) {}
 
     class Node {

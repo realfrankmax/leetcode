@@ -1,4 +1,4 @@
-package HighFrequency;
+package BinaryTree;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -7,8 +7,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Queue;
 
+import HighFrequency.TreeNode;
+
 /**
- * @leetcode: Binary Tree Vertical Order Traversal
+ * @leetcode: 314. Binary Tree Vertical Order Traversal
  */
 public class VerticalOrder {
     public static void main(String[] args) {}
