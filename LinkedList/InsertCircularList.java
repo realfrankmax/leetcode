@@ -1,7 +1,7 @@
-package HighFrequency;
+package LinkedList;
 
 /**
- * @leetcode: Insert into a Sorted Circular Linked List
+ * @leetcode: 708. Insert into a Sorted Circular Linked List
  */
 public class InsertCircularList {
     public static void main(String[] args) {}

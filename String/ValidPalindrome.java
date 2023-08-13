@@ -1,4 +1,4 @@
-package HighFrequency;
+package String;
 
 /**
  * @leetcode: 680. Valid Palindrome II
