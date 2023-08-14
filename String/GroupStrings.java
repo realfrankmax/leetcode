@@ -1,4 +1,4 @@
-package HighFrequency;
+package String;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @leetcode: Group Shifted Strings
+ * @leetcode: 249. Group Shifted Strings
  */
 public class GroupStrings {
     public static void main(String[] args) {}

@@ -1,4 +1,4 @@
-package HighFrequency;
+package String;
 
 /**
  * @leetcode: 921. Minimum Add to Make Parentheses Valid

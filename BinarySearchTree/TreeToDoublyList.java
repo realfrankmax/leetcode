@@ -1,4 +1,4 @@
-package HighFrequency;
+package BinarySearchTree;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

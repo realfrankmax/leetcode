@@ -1,4 +1,4 @@
-package HighFrequency;
+package Array;
 
 /**
  * @leetcode: 766. Toeplitz Matrix

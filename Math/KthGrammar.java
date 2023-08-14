@@ -1,4 +1,4 @@
-package HighFrequency;
+package Math;
 
 /**
  * @leetcode: 779. K-th Symbol in Grammar
@@ -17,6 +17,13 @@ public class KthGrammar {
         // Find out parent 1 or 0
         int parent = kthGrammar(n-1, (k+1) / 2);
         // exclusive OR with reversed last bit of K
+        /**
+         * 
+         *           0
+         *      0          1
+         *   0    1   1       0
+         * 0  1 1  0 1  0    0  1
+         */
         return parent ^ (~k&1);
     }
     /**

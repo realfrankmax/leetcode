@@ -1,4 +1,4 @@
-package HighFrequency;
+package String;
 
 /**
  * @leetcode: 791. Custom Sort String

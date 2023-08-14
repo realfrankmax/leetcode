@@ -1,4 +1,4 @@
-package HighFrequency;
+package Math;
 
 import java.util.Random;
 

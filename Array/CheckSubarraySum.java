@@ -1,10 +1,10 @@
-package HighFrequency;
+package Array;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @leetcode: Continuous Subarray Sum
+ * @leetcode: 523. Continuous Subarray Sum
  */
 public class CheckSubarraySum {
     public static void main(String[] args) {}

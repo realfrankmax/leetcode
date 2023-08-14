@@ -1,7 +1,7 @@
-package HighFrequency;
+package BinarySearchTree;
 
 /**
- * @leetcode: Range Sum of BST
+ * @leetcode: 938. Range Sum of BST
  */
 public class RangeSumBST {
     public static void main(String[] args) {}

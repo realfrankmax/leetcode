@@ -1,10 +1,10 @@
-package HighFrequency;
+package Heap;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * @leetcode: Moving Average from Data Stream
+ * @leetcode: 346. Moving Average from Data Stream
  */
 public class MovingAverage {
     public static void main(String[] args) {}

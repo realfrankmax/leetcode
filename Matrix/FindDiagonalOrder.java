@@ -1,4 +1,4 @@
-package HighFrequency;
+package Matrix;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

@@ -1,4 +1,4 @@
-package HighFrequency;
+package Array;
 
 /**
  * @leetcode: 2256. Minimum Average Difference

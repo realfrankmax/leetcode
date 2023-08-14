@@ -1,4 +1,4 @@
-package HighFrequency;
+package Array;
 
 /**
  * @leetcode: 670. Maximum Swap

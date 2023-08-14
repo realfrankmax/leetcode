@@ -1,4 +1,4 @@
-package HighFrequency;
+package Array;
 
 import java.util.Arrays;
 

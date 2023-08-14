@@ -1,4 +1,4 @@
-package HighFrequency;
+package HashTable;
 
 import java.util.ArrayList;
 import java.util.HashMap;

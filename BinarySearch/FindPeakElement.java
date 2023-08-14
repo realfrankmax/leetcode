@@ -1,4 +1,4 @@
-package HighFrequency;
+package BinarySearch;
 
 /**
  * @leetcode: 162. Find Peak Element

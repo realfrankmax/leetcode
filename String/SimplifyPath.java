@@ -1,10 +1,10 @@
-package HighFrequency;
+package String;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
 
 /**
- * @leetcode: Simplify Path
+ * @leetcode: 71. Simplify Path
  */
 public class SimplifyPath {
     public static void main(String[] args) {}

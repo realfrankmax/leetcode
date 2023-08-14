@@ -7,8 +7,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Queue;
 
-import HighFrequency.TreeNode;
-
 /**
  * @leetcode: 314. Binary Tree Vertical Order Traversal
  */

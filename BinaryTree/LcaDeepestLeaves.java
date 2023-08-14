@@ -1,4 +1,4 @@
-package HighFrequency;
+package BinaryTree;
 
 /**
  * @leetcode: 1123. Lowest Common Ancestor of Deepest Leaves

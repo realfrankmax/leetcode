@@ -1,10 +1,10 @@
-package HighFrequency;
+package Graph;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * @leetcode: Shortest Path in Binary Matrix
+ * @leetcode: 1091. Shortest Path in Binary Matrix
  */
 public class ShortestPathBinaryMatrix {
     public static void main(String[] args) {}
