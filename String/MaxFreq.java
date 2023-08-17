@@ -18,7 +18,9 @@ public class MaxFreq {
         while (left <= right && right < s.length()) {
             char c = s.charAt(right);
             count.put(c, count.getOrDefault(c, 0) + 1);
-            while ((count.size() > maxLetters) || ((right - left + 1) > maxSize)) {
+            // substring of minSize will detemine the maximum number of occurences.
+            // Any longer substring count would be equal to or smaller.
+            while (count.size() > maxLetters ||(right-left+1 > minSize)) {
                 c = s.charAt(left);
                 count.put(c, count.get(c)-1);
                 if (count.get(c) == 0) {
@@ -26,18 +28,10 @@ public class MaxFreq {
                 }
                 left++;
             }
-            while (count.size() <= maxLetters 
-                    && (right-left+1 >= minSize)) {
-
+            if (right-left+1 == minSize){
                 String sub = s.substring(left, right+1);
                 strCount.put(sub, strCount.getOrDefault(sub, 0)+1);
                 max = Math.max(max, strCount.get(sub));
-                c = s.charAt(left);
-                count.put(c, count.get(c)-1);
-                if (count.get(c) == 0) {
-                    count.remove(c);
-                }
-                left++;
             }
             right++;
         }
