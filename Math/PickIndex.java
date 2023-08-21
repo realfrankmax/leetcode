@@ -23,6 +23,7 @@ public class PickIndex {
         
         public int pickIndex() {
             Random rand = new Random();
+            // Because weight starts from 1,
             // nextInt returns [0, i), it needs to +1
             int val = rand.nextInt(prefixSum[prefixSum.length-1])+1;
             int left = 0;
