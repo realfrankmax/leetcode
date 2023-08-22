@@ -6,7 +6,7 @@ import java.util.Deque;
 /**
  * @leetcode: 227.Basic Calculator II
  */
-public class Calculate {
+public class BasicCalculatorII {
     public static void main(String[] args) {}
 
     public int calculate(String s) {

@@ -5,19 +5,12 @@ import java.util.Deque;
 import java.util.Set;
 
 /**
- * @leetcode: 224. Basic Calculator
+ * @leetcode: 772. Basic Calculator III
  */
-public class BasicCalculator {
+public class BasicCalculatorIII {
     public static void main(String[] args) {}
 
-    /**
-     * s consists of digits, '+', '-', '(', ')', and ' '.
-     * s represents a valid expression.
-     * '+' is not used as a unary operation (i.e., "+1" and "+(2 + 3)" is invalid).
-     * '-' could be used as a unary operation (i.e., "-1" and "-(2 + 3)" is valid).
-     */
-    // Same solution as 772
-    Set<Character> ops = Set.of('+', '-');
+    Set<Character> ops = Set.of('+', '-', '*', '/');
     public int calculate(String s) {
         int[] p = new int[1];
         return calculateFrom(s, p);
@@ -33,21 +26,27 @@ public class BasicCalculator {
             } else if (c == '(') {
                 p[0]++;
                 curr = calculateFrom(s, p);
-            }
-            if (p[0] == s.length()-1 || this.ops.contains(c) || c == ')') {
+            } 
+            if (this.ops.contains(c) || c == ')' || p[0] == s.length()-1){
                 switch (op) {
-                    case '+':
+                    case '+' :
                         nums.addLast(curr);
                         break;
-                    case '-':
+                    case '-' :
                         nums.addLast(-curr);
+                        break;
+                    case '*':
+                        nums.addLast(nums.removeLast() * curr);
+                        break;
+                    case '/':
+                        nums.addLast(nums.removeLast() / curr);
                         break;
                 }
                 if (c == ')') {
                     break;
                 }
-                op = c;
                 curr = 0;
+                op = c;
             }
             p[0]++;
         }
