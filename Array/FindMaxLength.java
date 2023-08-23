@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @leetcode: Contiguous Array
+ * @leetcode: 525. Contiguous Array
  */
 public class FindMaxLength {
     public static void main(String[] args) {}

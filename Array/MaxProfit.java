@@ -1,7 +1,7 @@
 package Array;
 
 /**
- * @leetcode: Best Time to Buy and Sell Stock
+ * @leetcode: 121. Best Time to Buy and Sell Stock
  */
 public class MaxProfit {
     public static void main(String[] args) {}

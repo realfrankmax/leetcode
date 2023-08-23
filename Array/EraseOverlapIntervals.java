@@ -3,7 +3,7 @@ package Array;
 import java.util.Arrays;
 
 /**
- * @leetcode: Non-overlapping Intervals
+ * @leetcode: 435. Non-overlapping Intervals
  */
 public class EraseOverlapIntervals {
     public static void main(String[] args) {}

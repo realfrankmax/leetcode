@@ -3,7 +3,7 @@ package Array;
 import java.util.Arrays;
 
 /**
- * @leetcode: Meeting Rooms
+ * @leetcode: 252. Meeting Rooms
  */
 public class CanAttendMeetings {
     public static void main(String[] args) {}

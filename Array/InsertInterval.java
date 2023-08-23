@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @leetcode: Insert Interval
+ * @leetcode: 57. Insert Interval
  */
 public class InsertInterval {
     public static void main(String[] args) {}
@@ -13,14 +13,18 @@ public class InsertInterval {
         List<int[]> res = new ArrayList<>();
         boolean hasAdded = false;
         for (int[] curr : intervals) {
-            if (!hasAdded && hasOverlap(curr, newInterval)) {
-                newInterval = merge(curr, newInterval);
-            } else {
-                if (!hasAdded && curr[0] > newInterval[0]) {
-                    res.add(newInterval);
-                    hasAdded = true;
-                }
+            if (hasAdded) {
                 res.add(curr);
+            } else {
+                if (hasOverlap(curr, newInterval)) {
+                    newInterval = merge(curr, newInterval);
+                } else {
+                    if (curr[0] > newInterval[0]) {
+                        res.add(newInterval);
+                        hasAdded = true;
+                    }
+                    res.add(curr);
+                }
             }
         }
         if (!hasAdded) {

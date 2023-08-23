@@ -1,7 +1,7 @@
 package Array;
 
 /**
- * @leetcode: Majority Element
+ * @leetcode: 169. Majority Element
  */
 public class MajorityElement {
     public static void main(String[] args) {}

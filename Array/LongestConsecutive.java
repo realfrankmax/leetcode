@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @leetcode: Longest Consecutive Sequence
+ * @leetcode: 128. Longest Consecutive Sequence
  */
 public class LongestConsecutive {
     public static void main(String[] args) {}
