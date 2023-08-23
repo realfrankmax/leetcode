@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.PriorityQueue;
 
 /**
- * @leetcode: Meeting Rooms II
+ * @leetcode: 253. Meeting Rooms II
  */
 public class MinMeetingRooms {
     public static void main(String[] args) {}

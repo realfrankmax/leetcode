@@ -1,7 +1,7 @@
 package Array;
 
 /**
- * @leetcode: Squares of a Sorted Array
+ * @leetcode: 977. Squares of a Sorted Array
  */
 public class SortedSquares {
     public static void main(String[] args) {}

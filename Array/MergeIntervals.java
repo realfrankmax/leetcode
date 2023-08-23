@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @leetcode: Merge Intervals
+ * @leetcode: 56. Merge Intervals
  */
 public class MergeIntervals {
     public static void main(String[] args) {}
