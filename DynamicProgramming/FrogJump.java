@@ -32,7 +32,7 @@ public class FrogJump {
         nextStep.get(stones[0]).add(0);
         for (int i = 0; i < stones.length-1; i++) {
             // if (i == stones.length-2) {
-                System.out.println(nextStep.get(stones[i]).size());
+                // System.out.println(nextStep.get(stones[i]).size());
             // }
             for (int step : nextStep.get(stones[i])) {
                 for (int k = step-1; k <= step+1; k++) {

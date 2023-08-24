@@ -6,7 +6,7 @@ package DynamicProgramming;
 public class CanPartition {
     public static void main(String[] args) {}
 
-    // For each num, the subarray could include it or not.
+    // For each num, the subset could include it or not.
     // So the outer loop is to check nums and inner loop is to check range [1, sum/2]
     public boolean canPartition(int[] nums) {
         if (nums.length < 2) {
@@ -31,6 +31,9 @@ public class CanPartition {
                 state[i][j] = state[i-1][j];
                 if (j >= nums[i-1]) {
                     state[i][j] = state[i][j] || state[i-1][j - nums[i-1]];
+                }
+                if (j == sum/2 && state[i][j]) {
+                    return true;
                 }
             }
         }
