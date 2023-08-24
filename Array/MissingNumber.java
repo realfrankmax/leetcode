@@ -1,4 +1,4 @@
-package Binary;
+package Array;
 
 /**
  * @leetcode: 268. Missing Number

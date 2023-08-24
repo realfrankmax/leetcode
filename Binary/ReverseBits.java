@@ -4,7 +4,17 @@ package Binary;
  * @leetcode: 190. Reverse Bits
  */
 public class ReverseBits {
-    public static void main(String[] args) {}
+    public static void main(String[] args) {
+        int i = Integer.MIN_VALUE;
+        System.out.println(Integer.toBinaryString(i));
+        for (int n = 0; n < 32; n++) {
+            System.out.println(i&1);
+            // i >>>= 1; Same outcome, but the i will be zero
+            i >>= 1; // i will be -1
+        }
+        System.out.println(Integer.toBinaryString(i));
+        System.out.println(i);
+    }
 
     // you need treat n as an unsigned value
     // Time: O(1): loop from 0 to 31

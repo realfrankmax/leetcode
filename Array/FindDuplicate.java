@@ -1,4 +1,4 @@
-package Binary;
+package Array;
 
 /**
  * @leetcode: 287. Find the Duplicate Number
