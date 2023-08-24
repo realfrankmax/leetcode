@@ -149,6 +149,17 @@ TreeSet<Integer> ts = new TreeSet<>();
 ts.ceiling(1);          // Returns the least element in this set greater than or equal to the given element, or null if there is no such element.
 ts.floor(1);            // Returns the greatest element in this set less than or equal to the given element, or null if there is no such element.
 ```
+### TreeMap
+```
+TreeMap<Integer, Integer> map = new TreeMap<>();
+
+map.ceilingEntry(1);
+map.ceilingKey(1); // Returns the least key greater than or equal to the given key, or null if there is no such key.
+map.higherKey(1);  // Returns the least key strictly greater than the given key, or null if there is no such key.
+
+map.floorKey(1);   // Returns the greatest key less than or equal to the given key, or null if there is no such key.
+map.lowerKey(1);   // Returns the greatest key strictly less than the given key, or null if there is no such key.
+```
 ### Queue
 ```
 // Methods to throw exception if fails
