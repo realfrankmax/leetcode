@@ -1,7 +1,7 @@
 package BinaryTree;
 
 /**
- * @leetcode: Diameter of Binary Tree
+ * @leetcode: 543. Diameter of Binary Tree
  */
 public class DiameterOfBinaryTree {
     public static void main(String[] args) {}

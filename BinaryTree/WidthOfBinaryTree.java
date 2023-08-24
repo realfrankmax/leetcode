@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * @leetcode: Maximum Width of Binary Tree
+ * @leetcode: 662. Maximum Width of Binary Tree
  */
 public class WidthOfBinaryTree {
     public static void main(String[] args) {}

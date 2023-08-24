@@ -1,7 +1,7 @@
 package BinaryTree;
 
 /**
- * @leetcode: Same Tree
+ * @leetcode: 100. Same Tree
  */
 public class IsSameTree {
     public static void main(String[] args) {}

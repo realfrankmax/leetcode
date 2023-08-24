@@ -1,7 +1,7 @@
 package BinaryTree;
 
 /**
- * @leetcode: Balanced Binary Tree
+ * @leetcode: 110. Balanced Binary Tree
  */
 public class IsBalanced {
     public static void main(String[] args) {}

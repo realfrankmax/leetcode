@@ -1,7 +1,7 @@
 package BinaryTree;
 
 /**
- * @leetcode: Binary Tree Maximum Path Sum
+ * @leetcode: 124. Binary Tree Maximum Path Sum
  */
 public class MaxPathSum {
     public static void main(String[] args) {}

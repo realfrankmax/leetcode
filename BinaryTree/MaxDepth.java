@@ -1,7 +1,7 @@
 package BinaryTree;
 
 /**
- * @leetcode: Maximum Depth of Binary Tree
+ * @leetcode: 104. Maximum Depth of Binary Tree
  */
 public class MaxDepth {
     public static void main(String[] args) {}

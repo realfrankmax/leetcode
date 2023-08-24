@@ -5,13 +5,13 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * @leetcode: Serialize and Deserialize Binary Tree
+ * @leetcode: 297. Serialize and Deserialize Binary Tree
  */
 public class SerializeTree {
     public static void main(String[] args) {}
 
-    private String delimiter = ",";
-    private String emptyNode = "#";
+    private static String delimiter = ",";
+    private static String emptyNode = "#";
     // Encodes a tree to a single string.
     public String serialize(TreeNode root) {
         StringBuilder sb = new StringBuilder();
