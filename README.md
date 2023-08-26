@@ -194,3 +194,24 @@ PriorityQueue<T> pq = new PriorityQueue<>((book1, book2) -> Integer.compare(book
     - It has to be initialized either during declaration or in constructor.
 ### Why to use Deque over Stack?
 Stack is a subclass of Vector which is synchronized which means it has locks involved on operations which cause overhead. If a thread-safe implementation is not needed, then we could use Deque which is faster. Array deques are not thread-safe; in the absence of external synchronization, they do not support concurrent access by multiple threads.
+### Nested Classes
+Inner Class 
+From java doc:
+- An inner class is associated with an instance of its enclosing class and has direct access to that object's methods and fields.
+```
+class OuterClass {
+    ...
+    class InnerClass {
+        ...
+    }
+}
+OuterClass outerObject = new OuterClass();
+OuterClass.InnerClass innerObject = outerObject.new InnerClass();
+```
+Static Nested Class
+From java doc:
+- A static nested class is behaviorally a top-level class that has been nested in another top-level class for packaging convenience.
+- It cannot use non-static field in the outer class, but ok on static ones.
+```
+StaticNestedClass staticNestedObject = new StaticNestedClass();
+```

@@ -70,7 +70,7 @@ public class FileSystem {
         return curr.content;
     }
 
-    class Node {
+    static class Node {
         boolean isFile;
         String content;
         Map<String, Node> children;

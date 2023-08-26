@@ -59,7 +59,7 @@ public class FindWords {
         return root;
     }
 
-    class Trie {
+    static class Trie {
         String s;
         Map<Character, Trie> children;
         public Trie() {
