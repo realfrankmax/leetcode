@@ -9,7 +9,7 @@ import java.util.Map;
 public class LRUCache {
     public static void main(String[] args) {}
 
-    public class Node {
+    static class Node {
         public int key;
         public int val;
         public Node prev;
