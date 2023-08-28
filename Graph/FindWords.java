@@ -13,6 +13,7 @@ public class FindWords {
 
     List<String> res;
     // Note: Avoid reusing characters, finding duplicate strings
+    // Time: O(M*4*3^(L-2)) where M is total cells, L is max word length
     public List<String> findWords(char[][] board, String[] words) {
         Trie root = buildTrie(words);
         res = new ArrayList<>();

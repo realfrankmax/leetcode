@@ -5,7 +5,7 @@ package Graph;
  */
 public class WordSearch {
     public static void main(String[] args) {}
-
+    // Time: O(M*4*3^(L-2)): M is total cells, L is word length
     public boolean exist(char[][] board, String word) {
         if (word.length() == 0) {
             return true;
