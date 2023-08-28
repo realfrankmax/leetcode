@@ -1,51 +1,51 @@
 package BinaryTree;
 
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.Queue;
-
 /**
  * @leetcode: 297. Serialize and Deserialize Binary Tree
  */
 public class SerializeTree {
     public static void main(String[] args) {}
 
-    private static String delimiter = ",";
-    private static String emptyNode = "#";
-    // Encodes a tree to a single string.
-    public String serialize(TreeNode root) {
-        StringBuilder sb = new StringBuilder();
-        treeToString(root, sb);
-        return sb.toString();
-    }
-
-    private void treeToString(TreeNode root, StringBuilder sb) {
-        if (root == null) {
-            sb.append(emptyNode).append(delimiter);
-            return ;
+    static class Codec {
+        static char DELIMITER = ',';
+        static char EMPTY = '#';
+        // Encodes a tree to a single string.
+        public String serialize(TreeNode root) {
+            StringBuilder sb = new StringBuilder();
+            if (root == null) {
+                sb.append(EMPTY).append(DELIMITER);
+                return sb.toString();
+            }
+            sb.append(root.val).append(DELIMITER);
+            sb.append(serialize(root.left));
+            sb.append(serialize(root.right));
+            return sb.toString();
         }
-        sb.append(root.val).append(delimiter);
-        treeToString(root.left, sb);
-        treeToString(root.right, sb);
-    }
-
-    // Decodes your encoded data to tree.
-    public TreeNode deserialize(String data) {
-        String[] nodes = data.split(delimiter);
-        Queue<String> q = new LinkedList<>(Arrays.asList(nodes));
-        return decode(q);
-    }
-    private TreeNode decode(Queue<String> nodes) {
-        if (nodes.isEmpty()) {
+    
+        // Decodes your encoded data to tree.
+        public TreeNode deserialize(String data) {
+            int[] p = new int[1];
+            return helper(data, p);
+        }
+        private TreeNode helper(String data, int[] p) {
+            if (p[0] >= data.length()) {
+                return null;
+            }
+            if (data.charAt(p[0]) == EMPTY) {
+                p[0] += 2;
+                return null;
+            }
+            for (int i = p[0]; i < data.length(); i++) {
+                if (data.charAt(i) == DELIMITER) {
+                    int rootVal = Integer.parseInt(data.substring(p[0], i));
+                    TreeNode root = new TreeNode(rootVal);
+                    p[0] = i+1;
+                    root.left = helper(data, p);
+                    root.right = helper(data, p);
+                    return root;
+                }
+            }
             return null;
         }
-        String curr = nodes.remove();
-        if (curr.equals(emptyNode)) {
-            return null;
-        }
-        TreeNode root = new TreeNode(Integer.parseInt(curr));
-        root.left = decode(nodes);
-        root.right = decode(nodes);
-        return root;
     }
 }
