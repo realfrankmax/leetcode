@@ -1,13 +1,72 @@
 package Graph;
 
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedList;
+import java.util.Map;
 import java.util.Queue;
+import java.util.Set;
 
 /**
  * @leetcode: 200. Number of Islands
  */
 public class NumIslands {
     public static void main(String[] args) {}
+
+    public int numIslands_rowprocessing(char[][] grid) {
+        int n = grid[0].length;
+        int[] prev = new int[n];
+        int label = 1;
+        Map<Integer, Integer> uf = new HashMap<>();
+        for (char[] row : grid) {
+            int[] curr = new int[n];
+            if (row[0] == '1') {
+                if (prev[0] != 0) {
+                    curr[0] = prev[0];
+                } else {
+                    curr[0] = label;
+                    uf.put(label, label);
+                    label++;
+                }
+            }
+            for (int i = 1; i < n; i++) {
+                if (row[i] == '1') {
+                    if (prev[i] == 0 && curr[i-1] == 0) {
+                        curr[i] = label;
+                        uf.put(label, label);
+                        label++;
+                    } else if (prev[i] == 0 || curr[i-1] == 0) {
+                        curr[i] = prev[i] == 0 ? curr[i-1] : prev[i];
+                    } else if (prev[i] == curr[i-1]) {
+                        curr[i] = prev[i];
+                    } else {
+                        int first = find(uf, curr[i-1]);
+                        int second = find(uf, prev[i]);
+                        if (first != second) {
+                            union(uf, first, second);
+                        }
+                        curr[i] = prev[i];
+                    }
+                }
+            }
+            prev = curr;
+        }
+        Set<Integer> count = new HashSet<>();
+        for (int k : uf.keySet()) {
+            int t = find(uf, k);
+            count.add(t);
+        }
+        return count.size();
+    }
+    private int find(Map<Integer, Integer> map, int k) {
+        while (map.get(k) != k) {
+            k = map.get(k);
+        }
+        return k;
+    }
+    private void union(Map<Integer, Integer> map, int k1, int k2) {
+        map.put(k1, k2);
+    }
 
     public int numIslands(char[][] grid) {
         int count = 0;
