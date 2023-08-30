@@ -33,23 +33,23 @@ public class FindMaxLength {
      *
      * // In case of additional input set whose values could cancel each other
      * // different pairs will use different position in count[]
-        public int findMaxLength(int[] nums) {
-            int[] count = new int[1];
-            Map<String, Integer> pos = new HashMap<>();
-            int len = 0;
-            pos.put(Arrays.toString(count), -1);
-            for (int i = 0; i < nums.length; i++) {
-                count[0] += (nums[i] == 1 ? 1 : -1);
-                String curr = Arrays.toString(count);
-                if (pos.containsKey(curr)) {
-                    len = Math.max(len, i - pos.get(curr));
-                } else {
-                    pos.put(curr, i);
-                }
+     */
+    public int findMaxLength_differentPairs(int[] nums) {
+        int[] count = new int[1];
+        Map<String, Integer> pos = new HashMap<>();
+        int len = 0;
+        pos.put(Arrays.toString(count), -1);
+        for (int i = 0; i < nums.length; i++) {
+            count[0] += (nums[i] == 1 ? 1 : -1);
+            String curr = Arrays.toString(count);
+            if (pos.containsKey(curr)) {
+                len = Math.max(len, i - pos.get(curr));
+            } else {
+                pos.put(curr, i);
             }
-            return len;
         }
-    */
+        return len;
+    }
 
     // O(N^2)
     // public int findMaxLength(int[] nums) {
