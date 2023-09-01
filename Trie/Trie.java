@@ -46,7 +46,7 @@ public class Trie {
         return true;
     }
 
-    class Node {
+    static class Node {
         boolean isWord;
         Map<Character, Node> children;
         public Node() {

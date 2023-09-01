@@ -32,7 +32,7 @@ public class CopyRandomList {
         }
         return copies.get(head);
     }
-    class Node {
+    static class Node {
         int val;
         Node next;
         Node random;

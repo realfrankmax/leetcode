@@ -6,7 +6,7 @@ package LinkedList;
 public class InsertCircularList {
     public static void main(String[] args) {}
 
-    class Node {
+    static class Node {
         public int val;
         public Node next;
     

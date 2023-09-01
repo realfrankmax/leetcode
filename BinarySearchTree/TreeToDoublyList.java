@@ -40,7 +40,7 @@ public class TreeToDoublyList {
         return head;
     }
 
-    class Node {
+    static class Node {
         public int val;
         public Node left;
         public Node right;

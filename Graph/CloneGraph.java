@@ -41,7 +41,7 @@ public class CloneGraph {
         return map.get(node);
     }
 
-    class Node {
+    static class Node {
         public int val;
         public List<Node> neighbors;
         public Node() {

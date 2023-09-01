@@ -44,7 +44,7 @@ public class WordDictionary {
         }
     }
 
-    class Node {
+    static class Node {
         boolean isWord;
         Map<Character, Node> children;
         public Node() {

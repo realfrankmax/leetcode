@@ -9,7 +9,7 @@ import java.util.Set;
 public class LowestCommonAncestorIII {
     public static void main(String[] args) {}
 
-    class Node {
+    static class Node {
         public int val;
         public Node left;
         public Node right;
