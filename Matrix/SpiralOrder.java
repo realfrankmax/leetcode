@@ -20,16 +20,13 @@ public class SpiralOrder {
             for (int i = left; i <= right; i++) {
                 out.add(matrix[top][i]);
             }
-            top++;
-            if (top > bottom) {
-                break;
-            } 
+            top++; 
             // right
             for (int i = top; i <= bottom; i++) {
                 out.add(matrix[i][right]);
             }
             right--;
-            if (left > right) {
+            if (top > bottom || left > right) {
                 break;
             }
             // bottom
