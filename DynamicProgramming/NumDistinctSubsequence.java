@@ -29,6 +29,26 @@ public class NumDistinctSubsequence {
         }
         return count[0][0] > Integer.MAX_VALUE ? -1 : (int)count[0][0];
     }
+
+    // Time O(len(s)*len(t))
+    // Space O(len(t))
+    public int numDistinct_betterSpace(String s, String t) {
+        int m = s.length();
+        int n = t.length();
+
+        long[] count = new long[n];
+        for (int i = m-1; i >= 0; i--) {
+            long prev = 1;
+            for (int j = n-1; j >= 0; j--) {
+                long temp = count[j];
+                if (s.charAt(i) == t.charAt(j)) {
+                    count[j] += prev;
+                }
+                prev = temp;
+            }
+        }
+        return count[0] > Integer.MAX_VALUE ? -1 : (int)count[0];
+    }
     // Time O(len(s)*len(t))
     // Space O(len(s)*len(t))
     Map<State, Integer> cache;
