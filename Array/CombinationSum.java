@@ -12,6 +12,7 @@ public class CombinationSum {
     private List<List<Integer>> combinations;
     private int[] candidates;
     
+    // Time O(N^(target/min)): target/min is the max number of candidates
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         this.combinations = new ArrayList<>();
         this.candidates = candidates;
