@@ -7,7 +7,7 @@ public class SearchMatrix {
     public static void main(String[] args) {}
 
     public boolean searchMatrix(int[][] matrix, int target) {
-        // Binary search on column 0
+        // search row
         int top = 0;
         int bottom = matrix.length-1;
         while (top <= bottom) {
@@ -15,26 +15,24 @@ public class SearchMatrix {
             if (matrix[mid][0] == target) {
                 return true;
             } else if (matrix[mid][0] > target) {
-                bottom--;
+                bottom = mid-1;
             } else {
-                top++;
+                top = mid+1;
             }
         }
         if (bottom == -1) {
             return false;
         }
-        // bottom is THE row that could contain target
-        // Binary search on row Bottom
         int left = 0;
-        int right = matrix[0].length-1;
+        int right = matrix[bottom].length-1;
         while (left <= right) {
             int mid = left + (right-left)/2;
             if (matrix[bottom][mid] == target) {
                 return true;
             } else if (matrix[bottom][mid] > target) {
-                right--;
+                right = mid-1;
             } else {
-                left++;
+                left = mid +1;
             }
         }
         return false;
