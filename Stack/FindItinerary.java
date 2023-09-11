@@ -14,7 +14,7 @@ import java.util.PriorityQueue;
 public class FindItinerary {
     public static void main(String[] args) {}
 
-    // Time O(N)
+    // Time O(N*log(N))
     // Space O(N)
     public List<String> findItinerary(List<List<String>> tickets) {
         Map<String, PriorityQueue<String>> routes = new HashMap<>();
